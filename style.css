@@ -1,3 +1,8 @@
+@font-face {
+    font-family: ChivoMono;
+    src: url(font/static/ChivoMono-Regular.ttf);
+}
+
 /* #conjuntoCards{
     display: flex;
     flex-wrap: wrap;
@@ -5,12 +10,23 @@
     justify-content: center;
 }
 */
+*{
+    box-sizing: border-box;
+    font-family: ChivoMono;
+    font-size: 20px;
+}
+
+img{
+    width: 200px;
+}
+
 .card{
     display: flex;
     justify-content: space-around;
     border: solid gray 1px;
     margin: 2px;
-    height: 200px;
+    padding: 10px;
+    height: 300px;
     width: auto;
     transition: height 0.5s ease-in;
 }
@@ -23,75 +39,47 @@
     height: 350px;
 }
 
-
-.bug{       
-    background-color: #9eaf1a;
+.fundo{
+    background-color: rgba(255, 255, 255, 0.493);
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
 }
 
-.dark{      
-    background-color: #3e2d23;
-    color:white
-}
+.dark, .fighting, .fire, .psychic, .poison, .ghost, .dragon{color: white;}
 
-.dragon{        
-    background-color: #6c5bc3;
-}
+.bug{ background-color: #9eaf1a; }
 
-.electric{      
-    background-color: #e69204;
-}
+.dark{ background-color: #3e2d23;}
 
-.fairy{     
-    background-color: #df8fdd;
-}
+.dragon{ background-color: #6c5bc3;}
 
-.fighting{      
-    background-color: #4d1e10;
-    color:white
-}
+.electric{ background-color: #e69204;}
 
-.flying{        
-    background-color: #d3d8fb;
-}
+.fairy{ background-color: #df8fdd;}
 
-.fire{      
-    background-color: #c72302;
-    color:white
-}
+.fighting{ background-color: #4d1e10;}
 
-.ghost{     
-    background-color:  #5a5ea9;
-}
+.flying{ background-color: #d3d8fb;}
 
-.grass{     
-    background-color: #74c438;
-}
+.fire{ background-color: #c72302;}
 
-.ground{        
-    background-color: #d3b766;
-}
+.ghost{ background-color:  #5a5ea9;}
 
-.ice{       
-    background-color: #d3b766;
-}
+.grass{ background-color: #74c438;}
 
-.normal{        
-    background-color: #c6c2bd;}
+.ground{ background-color: #d3b766;}
 
-.psychic{       
-    background-color: #e3346d;
-    color:white
-}
+.ice{ background-color: #6fd2f5;}
 
-.poison{        
-    background-color: #7a407b;
-    color:white
-}
+.normal{ background-color: #c6c2bd;}
 
-.steel{     
-    background-color:  #8f8e9e;
-}
+.psychic{ background-color: #e3346d;}
 
-.water{     
-    background-color: #308cea;
-}
+.poison{ background-color: #7a407b;}
+
+.rock{  background-color: #a68d46}
+
+.steel{ background-color:  #8f8e9e;}
+
+.water{ background-color: #308cea;}

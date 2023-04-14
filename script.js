@@ -5,7 +5,7 @@ let conjuntoCards = document.querySelector("#conjuntoCards");
 const fetchPokemon = () => {
     const getPokemonUrl = id =>`https://pokeapi.co/api/v2/pokemon/${id}`
     
-    for(let i = 1; i <= 1010; i++){
+    for(let i = 1; i <= 251; i++){
         pokemonPromises.push(fetch(getPokemonUrl(i)).then(response => response.json()))
     };
 
@@ -15,16 +15,21 @@ const fetchPokemon = () => {
             let cardsPokemon = pokemons.reduce((accumulator, {name, id, types, abilities, stats}) => {
                 let tipos = types.map(typeInfo => typeInfo.type.name).join(" | ");
                 let tiposClass = types.map(typeInfo => typeInfo.type.name);
-                let imagem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`; ''
+                let imagem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+                let imagemTipo = `https://pokeapi.co/api/v2/type/12/`;
                 let habilidades = abilities.map(abilInfo => abilInfo.ability.name).join(" | ");
                 let estatisticas = stats.map(a => a.base_stat).join(" | ");
                 let estatisticasSep = stats.map(a => a.base_stat);
                 accumulator += 
                 `
                 <div class="card ${tiposClass[0]}">
-                    <img src=${imagem}>
-                    <p>${id}. ${name}</p>
-                    <p>${tipos}</p>
+                    <div class="fundo">
+                        <img src=${imagem}>
+                    </div>
+                    <div>
+                        <p>${id}. ${name}</p>
+                        <p>${tipos}</p>
+                    </div>
                     <p>${habilidades}</p>
                     <ul>
                         <li>HP.:${estatisticasSep[0]}</li>
