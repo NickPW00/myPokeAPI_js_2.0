@@ -1,16 +1,41 @@
-#conjuntoCards{
+/* #conjuntoCards{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
+*/
 .card{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
     border: solid gray 1px;
     margin: 2px;
-    height: auto;
-    width: 200px;
+    height: 200px;
+    width: auto;
+    transition: height 0.5s ease-in;
 }
+
+.card:hover{
+    display: flex;
+    border: solid gray 1px;
+    margin: 2px;
+    width: auto;
+    height: 350px;
+}
+
+.ground{}
+.grass{}
+.poison{}
+.fire{}
+.water{}
+.flying{}
+.bug{}
+.normal{}
+.eletric{}
+.fairy{}
+.ice{}
+.steel{}
+.ghost{}
+.dragon{}
+.psychic{}
+.dark{}
