@@ -1,0 +1,16 @@
+#conjuntoCards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid gray 1px;
+    margin: 2px;
+    height: auto;
+    width: 200px;
+}
