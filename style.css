@@ -22,13 +22,18 @@ img{
 
 .card{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     border: solid gray 1px;
     margin: 2px;
     padding: 10px;
     height: 300px;
     width: auto;
     transition: height 0.5s ease-in;
+}
+
+.cardP1{
+    display: flex;
+    justify-content: space-around;
 }
 
 .card:hover{
