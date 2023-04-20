@@ -32,7 +32,7 @@ const integradoraDeArrays = a => {
 
 const gerarHTML = array => {
     let cardsPokemon = array.reduce(
-        (accumulator,
+        (accumulator,   
             {
                 name,
                 id,
