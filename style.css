@@ -46,6 +46,10 @@ img{
     border-radius: 100px;
 }
 
+.typeContainer img{
+    width: 85px;
+}
+
 .dark, .fighting, .fire, .psychic, .poison, .ghost, .dragon{color: white;}
 
 .bug{ background-color: #9eaf1a; }

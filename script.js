@@ -1,25 +1,25 @@
 const pokemonPromises = [];
-let body = document.querySelector("body");
-let conjuntoCards = document.querySelector("#conjuntoCards");
+var body = document.querySelector("body");
+var conjuntoCards = document.querySelector("#conjuntoCards");
 
 const fetchPokemon = () => {
     const getPokemonUrl = id =>`https://pokeapi.co/api/v2/pokemon/${id}`
     
-    for(let i = 1; i <= 251; i++){
+    for(var i = 1; i <= 251; i++){
         pokemonPromises.push(fetch(getPokemonUrl(i)).then(response => response.json()))
     };
 
     Promise.all(pokemonPromises)
         .then(pokemons => {
             console.log(pokemons[0], `https://pokeapi.co/api/v2/pokemon-species/0/`)
-            let cardsPokemon = pokemons.reduce((accumulator, {name, id, types, abilities, stats}) => {
-                let tipos = types.map(typeInfo => typeInfo.type.name).join(" | ");
-                let tiposClass = types.map(typeInfo => typeInfo.type.name);
-                let imagem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
-                let imagemTipo = `https://pokeapi.co/api/v2/type/12/`;
-                let habilidades = abilities.map(abilInfo => abilInfo.ability.name).join(" | ");
-                let estatisticas = stats.map(a => a.base_stat).join(" | ");
-                let estatisticasSep = stats.map(a => a.base_stat);
+            var cardsPokemon = pokemons.reduce((accumulator, {name, id, types, abilities, stats}) => {
+                var tipos = types.map(typeInfo => typeInfo.type.name).join(" | ");
+                var tiposClass = types.map(typeInfo => typeInfo.type.name);
+                var imagem = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+                var imagemTipo = `https://pokeapi.co/api/v2/type/12/`;
+                var habilidades = abilities.map(abilInfo => abilInfo.ability.name).join(" | ");
+                var estatisticas = stats.map(a => a.base_stat).join(" | ");
+                var estatisticasSep = stats.map(a => a.base_stat);
                 accumulator += 
                 `
                 <div class="card ${tiposClass[0]}">
@@ -28,7 +28,10 @@ const fetchPokemon = () => {
                     </div>
                     <div>
                         <p>${id}. ${name}</p>
-                        <p>${tipos}</p>
+                        <div class='typeContainer'>
+                        <img src='poketypesV2/${tiposClass[0]}.png' alt='tipo primário: ${tiposClass[0]}'>
+                        <img src='poketypesV2/${tiposClass[1]}.png' alt='tipo secundário: ${tiposClass[1]}' onerror="this.style.display='none'">
+                        </div>
                     </div>
                     <p>${habilidades}</p>
                     <ul>
