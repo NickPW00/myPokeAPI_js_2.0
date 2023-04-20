@@ -3,6 +3,26 @@
     src: url(font/static/ChivoMono-Regular.ttf);
 }
 
+:root{
+    --bug: #9eaf1a; 
+    --dark: #3e2d23;
+    --dragon: #6c5bc3;
+    --electric: #e69204;
+    --fairy: #df8fdd;
+    --fighting: #4d1e10;
+    --flying: #d3d8fb;
+    --fire: #c72302;
+    --ghost:  #5a5ea9;
+    --grass: #74c438;
+    --ground: #d3b766;
+    --ice: #6fd2f5;
+    --normal: #c6c2bd;
+    --psychic: #e3346d;
+    --poison: #7a407b;
+    --rock:  #a68d46;
+    --steel:  #8f8e9e;
+    --water: #308cea;
+}
 /* #conjuntoCards{
     display: flex;
     flex-wrap: wrap;
@@ -22,21 +42,17 @@ img{
 
 .card{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     border: solid gray 1px;
     margin: 2px;
     padding: 10px;
-    height: 300px;
+    height: auto;
     width: auto;
-    transition: height 0.5s ease-in;
 }
 
-.card:hover{
+.cardP1{
     display: flex;
-    border: solid gray 1px;
-    margin: 2px;
-    width: auto;
-    height: 350px;
+    justify-content: space-around;
 }
 
 .fundo{
